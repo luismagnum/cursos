@@ -14,7 +14,7 @@ import Footer from '@/components/footer/Footer';
 import Boton from '@/components/boton/Boton';
 import Testimonials from '@/components/testimonials/Testimonials';
 
-const page = () => {
+const Page = () => {
   useEffect(() => {
     AOS.init({
       offset:100,
@@ -54,4 +54,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
