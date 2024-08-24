@@ -91,7 +91,7 @@ const Testimonials = () => {
                                     </div>
                                     <div>
                                         <img src={imag} alt={name} className="rounded-full w-16 h-16"/>
-                                        <p className='text-xs text-black ml-2'>{name}</p>
+                                        <p className='text-sm text-black ml-2'>{name}</p>
                                     </div>
                                 </div>
                             </div>

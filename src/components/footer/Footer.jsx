@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { FaFacebook, FaInstagram, } from 'react-icons/fa'
 import { FaXTwitter } from "react-icons/fa6";
+import Botonw from "../botonw/Botonw";
 
 
 const section = [
@@ -11,6 +12,10 @@ const section = [
     {
         title:"Cursos Online",
         items:["zoom","practicas","en vivo"]
+    },
+    {
+        title:"Cursos Online",
+        items:["basico","intermedio","avanzado"]
     },
     {
         title:"Cursos Online",
@@ -41,9 +46,9 @@ const Footer = () => {
     <div className='w-full mt-12 bg-slate-900 text-gray-300 py-y px-2'>
         <br></br>
         <span>
-        <Image src='/curso.png' alt='' width={50} height={50} className='bg-white rounded-full text-center mx-auto object-contain'/>
+        <Image src='/curso.png' alt='' width={50} height={50} className='bg-white rounded-full text-center mx-auto mb-6 object-contain'/>
         </span>
-      <div className='max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-4'>
+      <div className='max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-6 text-center border-b-2 border-gray-600 py-4'>
         {
             section.map((section,index)=>(
                 <div key={index}>
@@ -63,10 +68,10 @@ const Footer = () => {
         }
         <div className='col-span-2 pt-8 md:pt-2'>
             <p className='font-bold uppercase'>
-             Quiero informacion
+             Informacion
             </p>
             <div className='flex flex-col sm:flex-row sm:justify-center sm:items-center text-center mx-auto'>
-            
+            <Botonw />
             </div>
         </div>
       </div>
