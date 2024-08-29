@@ -91,7 +91,7 @@ const Footer = () => {
         </div>
         <div className='flex items-center justify-center mx-auto'>
             <button className='grid grid-cols-1'>
-              <a className='flex text-center text-slate-500 font-semibold text-xl hover:text-slate-200 mb-10' href='./'>HOME</a>
+              <a className='flex text-center text-slate-500 font-semibold text-xl hover:text-slate-200 mb-10 scroll-smooth' href='./'>HOME</a>
             </button>
         </div>
     </div>

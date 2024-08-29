@@ -13,8 +13,12 @@ import Planes from '@/components/planes/Planes';
 import Footer from '@/components/footer/Footer';
 import Boton from '@/components/boton/Boton';
 import Testimonials from '@/components/testimonials/Testimonials';
+import ButtonRedirect from '@/components/ButtonRedirect/ButtonRedirect';
+import ButonIma from '@/components/ButonIma/ButonIma';
+import ButonPre from '@/components/ButonPre/ButonPre';
+import ContactPage from '@/components/ContactPage/ContactPage';
 
-const Page = () => {
+const Home = () => {
   useEffect(() => {
     AOS.init({
       offset:100,
@@ -34,6 +38,9 @@ const Page = () => {
       <div id='idiomas'>
         <Idiomas />
       </div>
+        <ButtonRedirect />
+        <ButonPre />
+        <ButonIma />
       <div id='testimonials'>
         <Testimonials />
       </div>
@@ -46,6 +53,9 @@ const Page = () => {
       <div id='planes'>
         <Planes />
       </div>
+      <div>
+      <ContactPage /> 
+      </div>
       <div id='footer'>
         <Footer />
       </div>
@@ -54,4 +64,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default Home

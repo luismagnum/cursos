@@ -40,7 +40,7 @@ const Testimonials = () => {
         dots: true,
         arrow: false,
         infinite: true,
-        speed: 500,
+        speed: 400,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,

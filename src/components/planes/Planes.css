@@ -98,7 +98,7 @@
   }
   
   .plan .button {
-    background-color: #6558d3;
+    background-color: #0c4a6e;
     border-radius: 6px;
     color: #fff;
     font-weight: 500;
@@ -112,5 +112,5 @@
   }
   
   .plan .button:hover, .plan .button:focus {
-    background-color: #4133B7;
+    background-color: #1FCAC5;
   }
