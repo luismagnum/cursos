@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import Image from "next/image";
 import Link from 'next/link';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
@@ -73,7 +74,13 @@ const DroppableImage = ({ image, onDrop }) => {
         isOver ? 'bg-green-100' : 'bg-white'
       } ${canDrop ? 'border-blue-500' : 'border-gray-300'}`}
     >
-      <img src={image.src} alt={image.name} className="w-full h-full object-contain" width={20} />
+      <Image 
+        src={image.src} 
+        alt={image.name} 
+        className="w-full h-full object-contain" 
+        width={128} 
+        height={128} 
+      />
     </div>
   );
 };
