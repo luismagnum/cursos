@@ -50,7 +50,7 @@ const Navbar = () => {
                 )}
             </div>
         </div>
-        <div className={`${menu ? "translate-x-0" : "-translate-x-full"} lg:hidden flex flex-col absolute bg-white text-sky-900 left-0 top-10 font-semibold text-2xl text-center pt-8 pb-6 gap-1 w-full h-60 transition-transform duration-300 z-50`}>
+        <div className={`${menu ? "translate-x-0" : "-translate-x-full"} lg:hidden flex flex-col absolute bg-white text-sky-900 left-0 top-14 font-semibold text-2xl text-center pt-8 pb-6 gap-1 w-full h-60 transition-transform duration-300 z-50`}>
         <Link href='/' className='hover:text-teal-500 transition-all cursor-pointer' onClick={closeMenu}>
                  Home
                  </Link>
@@ -66,8 +66,12 @@ const Navbar = () => {
                 <Link href='#footer' className='hover:text-teal-500 transition-all cursor-pointer' onClick={closeMenu}>
                   Contacto
                 </Link>
+                <span className='flex text-center mx-auto'>
+                <Image src='/brflag.png' alt='' width={30} height={30}/>
+                <Image src='/usaflag.png' alt='' width={30} height={30}/>
+                </span>
         </div>
-      </div>
+        </div>
     </div>
   )
 }
