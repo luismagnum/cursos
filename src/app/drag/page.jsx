@@ -130,18 +130,32 @@ const SingleExercise = ({ exercise }) => {
 };
 
 const Exercise = () => {
-  // Detecta si el dispositivo es táctil
   const isTouchDevice = typeof window !== "undefined" && "ontouchstart" in window;
 
   useEffect(() => {
-    if (isTouchDevice) {
-      // Prevenir desplazamiento mientras se arrastra
-      document.body.style.overflow = "hidden";
-    }
-    return () => {
+    const disableScroll = (e) => {
+      e.preventDefault();
+    };
+
+    const handleDragStart = () => {
       if (isTouchDevice) {
-        document.body.style.overflow = "auto";
+        document.addEventListener("touchmove", disableScroll, { passive: false });
       }
+    };
+
+    const handleDragEnd = () => {
+      if (isTouchDevice) {
+        document.removeEventListener("touchmove", disableScroll);
+      }
+    };
+
+    // Agregar eventos al iniciar y terminar el drag
+    document.addEventListener("dragstart", handleDragStart);
+    document.addEventListener("dragend", handleDragEnd);
+
+    return () => {
+      document.removeEventListener("dragstart", handleDragStart);
+      document.removeEventListener("dragend", handleDragEnd);
     };
   }, [isTouchDevice]);
 
