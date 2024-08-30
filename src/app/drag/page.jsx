@@ -103,7 +103,7 @@ const SingleExercise = ({ exercise }) => {
   return (
     <div className="p-4 mb-6 bg-gray-100 rounded-md">
       <h2 className="text-lg font-bold mb-4">
-        Arrastra la palabra "{exercise.word}" a la imagen correcta
+        Arrastra la palabra &quot;{exercise.word}&quot; a la imagen correcta
       </h2>
       <div className="flex flex-col items-center">
         <div className="flex space-x-4">
@@ -142,4 +142,5 @@ const Exercise = () => {
 };
 
 export default Exercise;
+
 
