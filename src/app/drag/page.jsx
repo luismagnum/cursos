@@ -1,37 +1,38 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from 'next/link';
-import { DndProvider, useDrag, useDrop } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
+import Link from "next/link";
+import { DndProvider, useDrag, useDrop } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { TouchBackend } from "react-dnd-touch-backend";
 
 const ItemTypes = {
-  WORD: 'word',
+  WORD: "word",
 };
 
 const exercises = [
   {
-    word: 'Avião',
+    word: "Avião",
     images: [
-      { id: 1, src: '/Avião.jpg', name: 'Avião' },
-      { id: 2, src: '/carro.jpg', name: 'Carro' },
-      { id: 3, src: '/bicicleta.jpg', name: 'Bicicleta' },
+      { id: 1, src: "/Avião.jpg", name: "Avião" },
+      { id: 2, src: "/carro.jpg", name: "Carro" },
+      { id: 3, src: "/bicicleta.jpg", name: "Bicicleta" },
     ],
   },
   {
-    word: 'Carro',
+    word: "Carro",
     images: [
-      { id: 1, src: '/bicicleta.jpg', name: 'Bicicleta' },
-      { id: 2, src: '/carro.jpg', name: 'Carro' },
-      { id: 3, src: '/Avião.jpg', name: 'Avião' },
+      { id: 1, src: "/bicicleta.jpg", name: "Bicicleta" },
+      { id: 2, src: "/carro.jpg", name: "Carro" },
+      { id: 3, src: "/Avião.jpg", name: "Avião" },
     ],
   },
   {
-    word: 'Bicicleta',
+    word: "Bicicleta",
     images: [
-      { id: 1, src: '/carro.jpg', name: 'Carro' },
-      { id: 2, src: '/bicicleta.jpg', name: 'Bicicleta' },
-      { id: 3, src: '/Avião.jpg', name: 'Avião' },
+      { id: 1, src: "/carro.jpg", name: "Carro" },
+      { id: 2, src: "/bicicleta.jpg", name: "Bicicleta" },
+      { id: 3, src: "/Avião.jpg", name: "Avião" },
     ],
   },
 ];
@@ -49,7 +50,7 @@ const DraggableWord = ({ word }) => {
     <div
       ref={drag}
       className={`w-full p-2 text-center cursor-pointer bg-blue-500 text-white rounded-md ${
-        isDragging ? 'opacity-50' : 'opacity-100'
+        isDragging ? "opacity-50" : "opacity-100"
       }`}
     >
       {word}
@@ -71,33 +72,33 @@ const DroppableImage = ({ image, onDrop }) => {
     <div
       ref={drop}
       className={`w-full sm:w-32 h-32 border-2 rounded-md p-2 ${
-        isOver ? 'bg-green-100' : 'bg-white'
-      } ${canDrop ? 'border-blue-500' : 'border-gray-300'}`}
+        isOver ? "bg-green-100" : "bg-white"
+      } ${canDrop ? "border-blue-500" : "border-gray-300"}`}
     >
-      <Image 
-        src={image.src} 
-        alt={image.name} 
-        className="w-full h-full object-contain" 
-        width={128} 
-        height={128} 
+      <Image
+        src={image.src}
+        alt={image.name}
+        className="w-full h-full object-contain"
+        width={128}
+        height={128}
       />
     </div>
   );
 };
 
 const SingleExercise = ({ exercise }) => {
-  const [feedback, setFeedback] = useState('');
+  const [feedback, setFeedback] = useState("");
 
   const handleDrop = (droppedWord, image) => {
     if (droppedWord === image.name) {
-      setFeedback('¡Correcto!');
+      setFeedback("¡Correcto!");
     } else {
-      setFeedback('Incorrecta. Vuelve a intentar.');
+      setFeedback("Incorrecta. Vuelve a intentar.");
     }
   };
 
   const handleReset = () => {
-    setFeedback('');
+    setFeedback("");
   };
 
   return (
@@ -129,18 +130,36 @@ const SingleExercise = ({ exercise }) => {
 };
 
 const Exercise = () => {
+  // Detecta si el dispositivo es táctil
+  const isTouchDevice = typeof window !== "undefined" && "ontouchstart" in window;
+
+  useEffect(() => {
+    if (isTouchDevice) {
+      // Prevenir desplazamiento mientras se arrastra
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      if (isTouchDevice) {
+        document.body.style.overflow = "auto";
+      }
+    };
+  }, [isTouchDevice]);
+
   return (
-    <DndProvider backend={HTML5Backend}>
+    <DndProvider backend={isTouchDevice ? TouchBackend : HTML5Backend}>
       <div className="p-6 max-w-xl mx-auto bg-white rounded-xl shadow-md space-y-8">
         {exercises.map((exercise, index) => (
           <SingleExercise key={index} exercise={exercise} />
         ))}
-        <Link href="/" className="flex text-center items-center justify-center mx-auto text-sky-900 hover:text-blue-500 font-bold ml-12">Volver al Home</Link>
+        <Link
+          href="/"
+          className="flex text-center items-center justify-center mx-auto text-sky-900 hover:text-blue-500 font-bold ml-12"
+        >
+          Volver al Home
+        </Link>
       </div>
     </DndProvider>
   );
 };
 
 export default Exercise;
-
-
