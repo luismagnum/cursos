@@ -1,4 +1,5 @@
 import Image from "next/image"
+import ButtonRedirect from "../ButtonRedirect/ButtonRedirect";
 
 const Hero = () => {
     return (

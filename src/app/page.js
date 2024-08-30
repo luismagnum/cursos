@@ -17,6 +17,7 @@ import ButtonRedirect from '@/components/ButtonRedirect/ButtonRedirect';
 import ButonIma from '@/components/ButonIma/ButonIma';
 import ButonPre from '@/components/ButonPre/ButonPre';
 import ContactPage from '@/components/ContactPage/ContactPage';
+import Frecuente from '@/components/frecuente/Frecuente';
 
 const Home = () => {
   useEffect(() => {
@@ -52,6 +53,9 @@ const Home = () => {
       </div>
       <div id='planes'>
         <Planes />
+      </div>
+      <div>
+        <Frecuente />
       </div>
       <div>
       <ContactPage /> 

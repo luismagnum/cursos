@@ -18,13 +18,13 @@ const TestimonialData = [
     {
         id: 1,
         name: "Luis Díaz",
-        text: "Gracias a este curso, ahora puedo hablar con fluidez en inglés. Los profesores son increíbles y las lecciones muy dinámicas. ¡Lo recomiendo al 100%!",
+        text: "Gracias a este curso, ahora puedo hablar con fluidez en inglés. Los profesores son increíbles y las lecciones muy dinámicas. El metodo es ideal. ¡Lo recomiendo al 100%!",
         imag: Imagen1,
     },
     {
         id: 2,
         name: "Luis Díaz",
-        text: "Nunca pensé que aprender Portugués sería tan fácil. El contenido es claro y práctico, y el apoyo del equipo docente es excepcional.",
+        text: "Nunca pensé que aprender Portugués sería tan fácil. El contenido es claro y práctico, y el apoyo del equipo docente es excepcional. Super recomendado!",
         imag: Imagen2,
     },
     {
@@ -82,7 +82,7 @@ const Testimonials = () => {
 
     return (
         <div style={BgStyle}>
-            <div className='bg-white/80'>
+            <div className='bg-white/75'>
                 <div className="container">
                     <div data-aos="fade-up" className='text-center mb-12'>
                         <h1 className='text-3xl text-sky-900 font-bold'>Testimonials</h1>
@@ -94,7 +94,7 @@ const Testimonials = () => {
                                     <div key={id} className='my-6'>
                                         <div className='flex flex-col gap-6 shadow-lg py-8 px-6 mx-4 rounded-3xl bg-sky-900'>
                                             <div className='flex flex-col items-center'>
-                                                <p className='text-xs text-white'>{text}</p>
+                                                <p className='text-sm text-white'>{text}</p>
                                             </div>
                                             <div className="flex items-center">
                                                 <Image
