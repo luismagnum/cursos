@@ -83,7 +83,7 @@ const EmailForm = () => {
   }, [success]);
 
   return (
-    <div className="w-full md:w-3/5 lg:w-3/5 mx-auto p-4 bg-white rounded shadow-md">
+    <div className="w-full md:w-3/5 lg:w-3/5 mx-4 md:mx-auto p-4 bg-white rounded shadow-md">
       <div className="flex items-center justify-center space-x-4 mb-4">
         <Image src='/curso.png' alt='logo' width={40} height={40} />
         <h2 className="text-center text-xl font-bold">Envíanos tu correo</h2>
@@ -92,7 +92,7 @@ const EmailForm = () => {
       {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-sm font-medium mb-2">Nombre</label>
+          <label className="block text-sm font-bold mb-2">Nombre</label>
           <input
             type="text"
             name="name"
@@ -104,7 +104,7 @@ const EmailForm = () => {
           {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium mb-2">Email</label>
+          <label className="block text-sm font-bold mb-2">Email</label>
           <input
             type="email"
             name="email"
@@ -117,7 +117,7 @@ const EmailForm = () => {
           {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium mb-2">Mensaje</label>
+          <label className="block text-sm font-bold mb-2">Mensaje</label>
           <textarea
             name="message"
             value={formData.message}

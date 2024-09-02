@@ -18,6 +18,7 @@ import ButonIma from '@/components/ButonIma/ButonIma';
 import ButonPre from '@/components/ButonPre/ButonPre';
 import ContactPage from '@/components/ContactPage/ContactPage';
 import Frecuente from '@/components/frecuente/Frecuente';
+import Timeline from '@/components/TimeLine';
 
 const Home = () => {
   useEffect(() => {
@@ -36,10 +37,10 @@ const Home = () => {
       <div id='home'>
         <Hero />
       </div>
+      <ButtonRedirect />
       <div id='idiomas'>
         <Idiomas />
       </div>
-        <ButtonRedirect />
         <ButonPre />
         <ButonIma />
       <div id='testimonials'>
@@ -53,6 +54,9 @@ const Home = () => {
       </div>
       <div id='planes'>
         <Planes />
+      </div>
+      <div>
+        <Timeline />
       </div>
       <div>
         <Frecuente />

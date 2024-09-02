@@ -102,8 +102,11 @@ const SingleExercise = ({ exercise }) => {
   };
 
   return (
+    <div className="text-center">
+      <h1 className='text-2xl text-sky-900 font-bold mt-10'>Ejercicios de portugués</h1>
+      <h2 className="text-xl font-semibold">Selecciona la respuesta correcta</h2>
     <div className="p-4 mb-6 bg-gray-100 rounded-md">
-      <h2 className="text-lg font-bold mb-4">
+      <h2 className="text-center text-lg font-bold mb-4">
         Arrastra la palabra &quot;{exercise.word}&quot; a la imagen correcta
       </h2>
       <div className="flex flex-col items-center">
@@ -125,6 +128,7 @@ const SingleExercise = ({ exercise }) => {
           Intentar de nuevo
         </button>
       )}
+    </div>
     </div>
   );
 };
@@ -167,7 +171,7 @@ const Exercise = () => {
         ))}
         <Link
           href="/"
-          className="flex text-center items-center justify-center mx-auto text-sky-900 hover:text-blue-500 font-bold ml-12"
+          className="flex text-center justify-center  text-sky-900 hover:text-blue-500 font-bold ml-4"
         >
           Volver al Home
         </Link>

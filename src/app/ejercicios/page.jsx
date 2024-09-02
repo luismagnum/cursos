@@ -45,6 +45,9 @@ const Ejercicios = () => {
   };
 
   return (
+    <div className="text-center">
+      <h1 className='text-2xl text-sky-900 font-bold mt-10'>Ejercicios de portugués</h1>
+      <h2 className="text-xl font-semibold">Selecciona la respuesta correcta</h2>
     <div className="p-6 max-w-md mx-auto bg-white rounded-xl shadow-md space-y-4">
       <h2 className="text-xl font-bold">{questions[currentQuestionIndex].text}</h2>
       <div className="space-y-2">
@@ -74,7 +77,8 @@ const Ejercicios = () => {
           {currentQuestionIndex < questions.length - 1 ? 'Siguiente pregunta' : 'Reiniciar preguntas'}
         </button>
       )}
-      <Link href="/" className="flex text-center items-center justify-center mx-auto text-sky-900 hover:text-blue-500 font-bold ml-12">Volver al Home</Link>
+      <Link href="/" className="flex text-center items-center justify-center  text-sky-900 hover:text-blue-500 font-bold ml-6">Volver al Home</Link>
+    </div>
     </div>
   );
 };
