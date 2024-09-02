@@ -78,7 +78,7 @@ const DroppableImage = ({ image, onDrop }) => {
       <Image
         src={image.src}
         alt={image.name}
-        className="w-full h-full object-contain"
+        className="w-full h-full object-cover"
         width={128}
         height={128}
       />
