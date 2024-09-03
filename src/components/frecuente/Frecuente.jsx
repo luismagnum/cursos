@@ -26,7 +26,7 @@ const Frecuente = () => {
     setActive(index === active ? null: index);
   };
   return (
-    <div className='max-w-2xl mx-auto mt-20 mb-28 px-3 py-4'>
+    <div className='max-w-2xl mx-auto mt-20 mb-28 px-4 md:px-8 py-4'>
       <h1 className='text-2xl text-sky-900 text-center font-bold pb-8'>Preguntas frecuentes</h1>
      {faqData.map((item, index) =>(
         <div key={index}>
