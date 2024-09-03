@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const ButtonRedirect = () => {
   return (
-    <div className="bg-blue-100 p-6 md:p-8 rounded-lg shadow-lg text-center max-w-md mx-auto">
+    <div data-aos="zoom-in" className="bg-blue-100 p-6 md:p-8 rounded-lg shadow-lg text-center max-w-md mx-auto">
       <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
         ¡Inscríbete en nuestros cursos de portugués o ingles!
       </h2>
@@ -21,17 +21,3 @@ const ButtonRedirect = () => {
 export default ButtonRedirect;
 
 
-/*const ButtonRedirect = () => {
-  return (
-    <div className='text-center justify-items-center mx-auto mt-0 md:mt-10 mb-12 px-4 md:px-8'>
-      <h1 className='text-xl text-sky-900 font-bold mb-4'>Quiero registrarme</h1>
-    <Link href="/formulario" legacyBehavior>
-      <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Ir al formulario
-      </a>
-    </Link>
-    </div>
-  );
-};
-
-export default ButtonRedirect;*/

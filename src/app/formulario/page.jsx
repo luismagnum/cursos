@@ -4,11 +4,11 @@ import Link from "next/link";
 const page = () => {
   return (
     <div>
-<div class="flex flex-col items-center justify-center h-screen dark">
-  <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
-    <h2 class="text-2xl font-bold text-gray-200 mb-4">Contact Form</h2>
+     <div class="flex flex-col items-center justify-center h-screen dark mx-4">
+     <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+      <h2 class="text-2xl font-bold text-gray-200 mb-4">Contact Form</h2>
 
-    <form class="flex flex-wrap">
+     <form class="flex flex-wrap">
       <input
         type="text"
         class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] mr-[2%]"
