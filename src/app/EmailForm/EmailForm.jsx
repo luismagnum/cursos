@@ -92,7 +92,7 @@ const EmailForm = () => {
       {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-bold mb-2">Nombre</label>
+          <label className="block text-gray-600 text-xs font-bold mb-2">Nombre</label>
           <input
             type="text"
             name="name"
@@ -104,7 +104,7 @@ const EmailForm = () => {
           {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
         </div>
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-bold mb-2">Email</label>
+          <label className="block text-gray-600 text-xs font-bold mb-2">Email</label>
           <input
             type="email"
             name="email"
@@ -117,7 +117,7 @@ const EmailForm = () => {
           {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
         </div>
         <div className="mb-4">
-          <label className="block text-gray-600 text-sm font-bold mb-2">Mensaje</label>
+          <label className="block text-gray-600 text-xs font-bold mb-2">Mensaje</label>
           <textarea
             name="message"
             value={formData.message}
