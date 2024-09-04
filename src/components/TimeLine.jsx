@@ -39,6 +39,7 @@ const Timeline = () => {
         </div>
       ))}
     </div>
+    <div className="h-[3px] bg-transparent shadow-[0_6px_6px_0_rgba(30,58,138,0.5)]"></div>
     </div>
   );
 };

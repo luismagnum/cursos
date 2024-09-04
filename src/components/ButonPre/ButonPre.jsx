@@ -4,7 +4,8 @@ import Link from 'next/link';
 const ButonPre = () => {
     return (
       <div>
-        <h1 className='text-sky-900 font-bold text-xl md:text-3xl text-center'>Quieres practicar Brasileiro?</h1>
+        <h1 className='text-sky-900 font-bold text-xl md:text-3xl text-center mb-2'>Quieres practicar Brasileiro?</h1>
+        <h3 className="text-sky-800 font-bold text-xl md:text-2xl text-center">Ejercicios basicos para empezar</h3>
         <div className='flex flex-col lg:flex-row justify-center items-center lg:px-32 px-5 mx-4 mb-16'>
         <Image src='/fotobr.png' alt='br' width={300} height={300}/>
         <div className='grid grid-cols-1 md:grid-cols-3 text-center mx-auto mt-16'>

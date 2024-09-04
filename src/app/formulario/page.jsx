@@ -51,9 +51,9 @@ const page = () => {
       >
         Submit
       </button>
-      <Link href="/" className="text-center text-indigo-500 hover:text-white font-bold ml-12">Volver al Home</Link>
     </form>
   </div>
+  <Link href="/" className="text-center text-indigo-500 hover:text-indigo-800 font-bold mt-2 ml-4">Volver al Home</Link>
 </div>
 
     </div>
