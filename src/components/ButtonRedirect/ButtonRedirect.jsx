@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const ButtonRedirect = () => {
   return (
-    <div data-aos="zoom-in" className="bg-blue-100 p-6 md:p-8 rounded-lg shadow-lg text-center max-w-md mx-auto mt-6">
+    <div data-aos="zoom-in" className="bg-blue-100 p-6 md:p-8 rounded-lg shadow-lg text-center max-w-md mx-auto mt-4">
       <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
         ¡Inscríbete en nuestros cursos de portugués o ingles!
       </h2>
