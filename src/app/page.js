@@ -20,6 +20,7 @@ import ContactPage from '@/components/ContactPage/ContactPage';
 import Frecuente from '@/components/frecuente/Frecuente';
 import Timeline from '@/components/TimeLine';
 
+
 const Home = () => {
   useEffect(() => {
     AOS.init({
