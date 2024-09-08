@@ -30,7 +30,7 @@ const Dashboard = () => {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
         <h1>No estás autenticado</h1>
-        <Link href="/login" className= "block w-full px-4 py-2 mt-4 text-center text-white bg-green-500 rounded-lg hover:bg-green-600">
+        <Link href="/" className= "block w-full px-4 py-2 mt-4 text-center text-white bg-green-500 rounded-lg hover:bg-green-600">
           Ir a la página de inicio de sesión
         </Link>
       </div>
