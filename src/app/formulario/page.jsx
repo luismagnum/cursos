@@ -5,27 +5,6 @@ import { googleProvider } from "@/firebase/firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { useState, useEffect } from "react";
 
-const googleLogo = (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-5 h-5 mr-2">
-    <path
-      fill="#4285F4"
-      d="M24 9.5c2.06 0 3.94.72 5.42 1.9l4.02-4.02C30.88 5.34 27.61 4 24 4 15.94 4 9.44 9.96 8.05 17.54l4.95 3.86C14.12 14.64 18.63 9.5 24 9.5z"
-    />
-    <path
-      fill="#34A853"
-      d="M24 44c5.84 0 10.72-1.93 14.28-5.26l-4.95-3.9c-2.58 1.73-5.85 2.76-9.33 2.76-5.4 0-10-3.46-11.66-8.28l-5.01 3.86C10.33 39.88 16.7 44 24 44z"
-    />
-    <path
-      fill="#FBBC05"
-      d="M42.72 24.5c0-.8-.07-1.57-.2-2.32H24v6.82h10.64c-.46 2.22-1.71 4.09-3.49 5.36l5 3.9c2.92-2.7 4.57-6.67 4.57-11.76z"
-    />
-    <path
-      fill="#EA4335"
-      d="M12.34 28.32C11.93 27.07 11.7 25.8 11.7 24.5s.23-2.57.64-3.82l-4.96-3.86C6.49 19.18 6 21.79 6 24.5s.49 5.32 1.38 7.68l4.96-3.86z"
-    />
-  </svg>
-);
-
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -112,7 +91,6 @@ const LoginForm = () => {
           onClick={handleGoogleLogin}
           className="flex items-center justify-center w-full px-4 py-2 text-white bg-black rounded-lg hover:bg-green-500"
         >
-          {googleLogo}
           Iniciar sesión con Google
         </button>
         {loginSuccess && (
