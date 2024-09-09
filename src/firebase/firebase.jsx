@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  apiKey: "AIzaSyBJwZtkW_77UuePml7BW4cGYwwcPvsi_Lo",
+  authDomain: "cursologin-d52fc.firebaseapp.com",
+  projectId: "cursologin-d52fc",
+  storageBucket:"cursologin-d52fc.appspot.com",
+  messagingSenderId:"789580008376",
+  appId: "1:789580008376:web:470f540c3f0fe90253dd4d",
 };
 
 const app = initializeApp(firebaseConfig);
