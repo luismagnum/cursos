@@ -39,7 +39,6 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="text-center mx-auto m-4">
     <div className="flex text-center items-center justify-center">
       <h1 className="text-center text-xl font-bold">Bienvenido, <span className="text-sm">{user.email}</span></h1>
       <p className="text-center text-xl font-bold">Hola curso de portugues</p>
@@ -51,7 +50,6 @@ const Dashboard = () => {
         Cerrar sesión y Logout
       </Link>
     </div>
-  </div>
   );
 };
 
