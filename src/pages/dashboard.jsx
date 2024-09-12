@@ -40,7 +40,7 @@ const Dashboard = () => {
 
   return (
     <div className="flex text-center items-center justify-center">
-      <h1 className="text-center text-xl font-bold">Bienvenido, <span className="text-sm">{user.email}</span></h1>
+      <h1 className="text-center text-xl font-bold">Bienvenido,{user.email}</h1>
       <p className="text-center text-xl font-bold">Curso de portugues</p>
       <div className="container">
       <Link href="/formulario"
