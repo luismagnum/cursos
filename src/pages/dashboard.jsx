@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "@/firebase/firebase";
 import Link from "next/link";
+import './Dash.css'
 
 const Dashboard = () => {
   const [user, setUser] = useState(null); 
@@ -40,14 +41,15 @@ const Dashboard = () => {
   return (
     <div className="flex text-center items-center justify-center">
       <h1 className="text-center text-xl font-bold">Bienvenido, <span className="text-sm">{user.email}</span></h1>
-      <p className="text-center text-xl font-bold">Hola curso de portugues</p>
-      
+      <p className="text-center text-xl font-bold">Curso de portugues</p>
+      <div className="container">
       <Link href="/formulario"
         onClick={handleLogout}
-        className="px-4 py-2 mt-4 text-center text-white bg-green-500 rounded-lg hover:bg-green-600"
+        className="link px-4 py-2 mt-4 text-center text-white bg-green-500 rounded-lg hover:bg-green-600"
       >
         Cerrar sesión y Logout
       </Link>
+      </div>
     </div>
   );
 };
