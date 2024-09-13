@@ -36,8 +36,3 @@ const Hero = () => {
 
 export default Hero;
 
-
-
-//<button className="mt-2">
-//<a href="https://wa.me/542984792639?text=Hola quiero hacer un pedido" target="_blank"><span className='sm:text-xs md:text-sm text-white ml-0 bg-sky-900 hover:bg-blue-500 px-4 py-2 rounded-lg'>Whatsapp</span></a>
-//</button>

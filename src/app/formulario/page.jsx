@@ -2,19 +2,16 @@
 import Link from "next/link";
 import { auth } from "@/firebase/firebase";
 import { googleProvider } from "@/firebase/firebase";
-import {
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  createUserWithEmailAndPassword,
-} from "firebase/auth";
+import { signInWithEmailAndPassword, signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
 import { useState, useEffect } from "react";
+import Image from "next/image"; // Importa Image
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [loginSuccess, setLoginSuccess] = useState(false);
-  const [isRegistering, setIsRegistering] = useState(false); // Nuevo estado para controlar si es registro o login
+  const [isRegistering, setIsRegistering] = useState(false);
 
   useEffect(() => {
     if (error) {
@@ -33,11 +30,9 @@ const LoginForm = () => {
     setError(null);
     try {
       if (isRegistering) {
-        // Si está en modo registro, creamos una cuenta
         await createUserWithEmailAndPassword(auth, email, password);
         setLoginSuccess(true);
       } else {
-        // Si no, iniciamos sesión
         await signInWithEmailAndPassword(auth, email, password);
         setLoginSuccess(true);
       }
@@ -78,9 +73,7 @@ const LoginForm = () => {
         {error && <p className="text-red-500">{error}</p>}
         <form onSubmit={handleEmailLogin}>
           <div className="mb-4">
-            <label className="block mb-2 text-sm font-medium text-gray-700">
-              Correo electrónico
-            </label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">Correo electrónico</label>
             <input
               type="email"
               value={email}
@@ -90,9 +83,7 @@ const LoginForm = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 text-sm font-medium text-gray-700">
-              Contraseña
-            </label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">Contraseña</label>
             <input
               type="password"
               value={password}
@@ -113,6 +104,13 @@ const LoginForm = () => {
           onClick={handleGoogleLogin}
           className="flex items-center justify-center w-full px-4 py-2 text-white bg-black rounded-lg hover:bg-green-500"
         >
+          <Image
+            src="/gogle.png" // Asegúrate de que la ruta sea correcta
+            alt="Google Logo"
+            width={20}
+            height={20}
+            className="mr-2"
+          />
           {isRegistering ? "Registrarse con Google" : "Iniciar sesión con Google"}
         </button>
         {loginSuccess && (
@@ -124,9 +122,7 @@ const LoginForm = () => {
           </Link>
         )}
         <p className="text-center mt-4">
-          {isRegistering
-            ? "¿Ya tienes una cuenta?"
-            : "¿No tienes una cuenta?"}{" "}
+          {isRegistering ? "¿Ya tienes una cuenta?" : "¿No tienes una cuenta?"}{" "}
           <button
             onClick={() => setIsRegistering(!isRegistering)}
             className="text-blue-500 hover:underline"
