@@ -44,7 +44,7 @@ const items = [
 
 const Footer = () => {
   return (
-    <div className='w-full mt-12 bg-slate-900 text-gray-300 py-y px-2'>
+    <div className='w-full mt-12 bg-slate-900 text-gray-300 py-y px-8'>
         <br></br>
         <span>
         <Image src='/curso.png' alt='' width={50} height={50} className='bg-white rounded-full text-center mx-auto mb-6 object-contain'/>
@@ -71,8 +71,13 @@ const Footer = () => {
             <p className='font-bold uppercase'>
              Informacion
             </p>
-            <div className='flex flex-col sm:flex-row sm:justify-center sm:items-center text-center mx-auto'>
-            <Botonw />
+            <div className='flex flex-col sm:flex-row sm:justify-center sm:items-center text-center mx-auto mt-2'>
+                <button className="inline-block font-semibold tracking-wide border-none justify-center text-center bg-gray-500 hover:text-teal-500 duration-300 px-8 sm:px-16 py-2 font-[Poppins] rounded-xl md:mr-15 md:rounded-md md:text-white w-full md:w-auto min-w-[200px] mx-0 sm:mx-6">
+                <a href="https://wa.me/542984792639?text=Hola quiero hacer un pedido" target="_blank" className="flex items-center justify-center space-x-2">
+                <Image src="./whatsapp-fill.svg" alt="what" width={30} height={30} className='flex-shrink-0'/>
+                <span className='font-bold sm:text-sm md:text-xl'>Click aqui</span>
+                </a>
+                </button>
             </div>
         </div>
       </div>
