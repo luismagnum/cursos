@@ -17,25 +17,25 @@ const BgStyle = {
 const TestimonialData = [
     {
         id: 1,
-        name: "Luis Díaz",
+        name: "Luis Díaz.",
         text: "Gracias a este curso, ahora puedo hablar con fluidez en inglés. Los profesores son increíbles y las lecciones muy dinámicas. El metodo es ideal. ¡Lo recomiendo al 100%!",
         imag: Imagen1,
     },
     {
         id: 2,
-        name: "Luis Díaz",
+        name: "Paola B.",
         text: "Nunca pensé que aprender Portugués sería tan fácil. El contenido es claro y práctico, y el apoyo del equipo docente es excepcional. Super recomendado!",
         imag: Imagen2,
     },
     {
         id: 3,
-        name: "Luis Díaz",
+        name: "Carlos L.",
         text: "El curso de inglés me ayudó a mejorar mi vocabulario rápidamente. Las clases en línea son interactivas y efectivas. Estoy muy contenta con mi progreso.",
         imag: Imagen3,
     },
     {
         id: 4,
-        name: "Luis Díaz",
+        name: "Ana G.",
         text: "Este curso de portugués superó mis expectativas. Aprendí a leer y escribir en portugués en pocas semanas. ¡Una experiencia de aprendizaje maravillosa!",
         imag: Imagen1,  // Puedes repetir o usar otras imágenes
     },
@@ -104,7 +104,7 @@ const Testimonials = () => {
                                                     width={64}
                                                     height={64}
                                                 />
-                                                <p className='text-sm text-black ml-2'>{name}</p>
+                                                <p className='text-sm text-white ml-2'>{name}</p>
                                             </div>
                                         </div>
                                     </div>
